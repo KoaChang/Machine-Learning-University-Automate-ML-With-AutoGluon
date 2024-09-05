@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<div style="padding: 10px; border: 10px solid #330066; display: inline-block;">
+    <b>Copy and paste the below to the code cell prepared above and execute the code:</b>
+
+    <pre><code>
+
+# Create copy of small dataframe
+train_data_feateng = df_train_smaller.copy()
+
+# Clean up features with helper functions
+train_data_feateng["hard-paper"] = train_data_feateng["Edition"].apply(
+    lambda x: x.split(",")[0]
+)
+
+train_data_feateng["year"] = train_data_feateng["Edition"].apply(year_get)
+
+train_data_feateng["month"] = train_data_feateng["Edition"].apply(month_get)
+
+train_data_feateng["Reviews-n"] = train_data_feateng["Reviews"].apply(first_num)
+
+train_data_feateng["Ratings-n"] = train_data_feateng["Ratings"].apply(first_num)
+
+# Drop original features
+train_data_feateng.drop(["Edition", "Ratings", "Reviews"], axis=1, inplace=True)
+
+    </code></pre>
+
+</div>
+
+
+</html>
