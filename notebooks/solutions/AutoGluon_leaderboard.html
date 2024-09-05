@@ -1,0 +1,6 @@
+<html>
+<p style="padding: 10px; border: 10px solid #330066; display: inline-block;">
+<b>There is no unique answer!</b> The use case will determine how to balance model performance (<code>score_val</code>) with other considerations such as the time required for training (<code>fit_time</code>) and predicting (<code>pred_time_val</code>). The latter two are usually associated with costs and/or latency considerations. So, a solution should balance these three dimensions: performance, training time and prediction time.<br><br>
+As an example, in the output above, you can see that <b>WeightedEnsemble_L2</b> model has similar performance to <b>CatBoost</b>. 
+    However, <b>CatBoost</b> has significantly lower prediction time (<code>pred_time_val</code>). So, if latency is your main consideration, <b>CatBoost</b> should be your first choice. If performance is key, then <b>WeightedEnsemble_L2</b> remains the best choice.</p>
+</html>

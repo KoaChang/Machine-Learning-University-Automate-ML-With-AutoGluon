@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<div style="padding: 10px; border: 10px solid #330066; display: inline-block;">
+    <b>Copy and paste the below to the code cell prepared above and execute the code:</b>
+
+    <pre><code>
+
+print(f"Number of Missing values\n") 
+
+print(f"month: {train_data_feateng[train_data_feateng['month']=='None'].shape[0]}")
+
+print(f"year: {train_data_feateng[train_data_feateng['year'].isnull()].shape[0]}")
+
+print(f"hard-paper: {train_data_feateng[train_data_feateng['hard-paper']=='None'].shape[0]}")
+
+print(f"Ratings-n: {train_data_feateng[train_data_feateng['Ratings-n'].isnull()].shape[0]}")
+
+print(f"Reviews-n: {train_data_feateng[train_data_feateng['Reviews-n'].isnull()].shape[0]}")
+
+    </code></pre>
+    <br>
+    <p><b>There are a few missing values!</b> You should look for missing values in your data during your Exploratory
+        Data Analysis tasks (EDA). How to interpret and handle these missing values depends on the circumstances related
+        to the business problem and how the data was collected. As EDA is not in the scope of this course and there are
+        only a few missing values, we will just keep them.</p>
+</div>
+
+
+</html>

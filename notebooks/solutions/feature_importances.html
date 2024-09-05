@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<div style="padding: 10px; border: 10px solid #330066; display: inline-block;">
+    <b>Copy and paste the below to the first code cell prepared above and execute the code:</b>
+
+    <pre><code>
+
+smaller_predictor.feature_importance(df_train_smaller)
+
+    </code></pre>
+    <b>Copy and paste the below to the second code cell prepared above and execute the code:</b>
+
+    <pre><code>
+
+feateng_predictor.feature_importance(train_data_feateng.fillna(0))
+
+    </code></pre>
+    <p><b>Discussion:</b> By comparing the results you can observe that Synopsis, Title and Genre roughly keep the same position. They share the same information in the original and modified dataset so this makes sense. 
+<br><br>
+For the new numerical features (Ratings-n & Reviews-n) that were derived from the original Ratings feature, it seems that Autogluon gives more importance for the numerical version (Ratings-n). You can also observe that </p>
+</div>
+
+
+</html>
